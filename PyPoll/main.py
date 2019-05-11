@@ -71,7 +71,7 @@ with open(csvpath, newline="") as csvfile:
     print("----------------------------")
     for i in range(0,len(Candidates)): 
         print(Candidates[i] + ": " + str(Percent[i]) +  "% (" + str(Votes[i]) + ")")
-
+    print("Winner: " + Candidates[0])
         
     file = open("results.txt", "w")
     file.write("Election Results" + '\n')
@@ -80,4 +80,5 @@ with open(csvpath, newline="") as csvfile:
     file.write("----------------------------" + '\n')
     for i in range(0,len(Candidates)): 
         file.write(Candidates[i] + ": " + str(Percent[i]) +  "% (" + str(Votes[i]) + ")" +'\n')
+    file.write("Winner: " + Candidates[0])
     file.close()
